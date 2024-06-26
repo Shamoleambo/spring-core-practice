@@ -4,7 +4,7 @@ package com.tidz.core.entities;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FunkoColelctor implements Stupid {
+public class FunkoCollector implements Stupid {
 
 	@Override
 	public String speak() {
