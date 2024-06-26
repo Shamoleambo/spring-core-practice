@@ -13,15 +13,23 @@ import com.tidz.core.entities.Stupid;
 public class SuperRestController {
 
 	private Stupid stupid;
+	private Stupid stupidToCheck;
 
 	@Autowired
-	public SuperRestController(@Qualifier("funkoCollector") Stupid stupid) {
+	public SuperRestController(@Qualifier("funkoCollector") Stupid stupid,
+			@Qualifier("funkoCollector") Stupid stupidToCheck) {
 		this.stupid = stupid;
+		this.stupidToCheck = stupidToCheck;
 	}
 
 	@GetMapping("/stupidSays")
 	public String checksForTheStupid() {
 		return this.stupid.speak();
 	}
-	
+
+	@GetMapping("/isEqual")
+	public boolean checkInstance() {
+		return this.stupid == this.stupidToCheck;
+	}
+
 }
