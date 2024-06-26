@@ -23,5 +23,5 @@ public class SuperRestController {
 	public String checksForTheStupid() {
 		return this.stupid.speak();
 	}
-
+	
 }
