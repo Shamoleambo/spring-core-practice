@@ -13,13 +13,18 @@ public class SuperRestController {
 
 	private Stupid stupid;
 
-	@Autowired
-	public SuperRestController(Stupid stupid) {
-		this.stupid = stupid;
-	}
+//	@Autowired
+//	public SuperRestController(Stupid stupid) {
+//		this.stupid = stupid;
+//	}
 
 	@GetMapping("/stupidSays")
 	public String checksForTheStupid() {
 		return this.stupid.speak();
+	}
+
+	@Autowired
+	public void setStupid(Stupid stupid) {
+		this.stupid = stupid;
 	}
 }

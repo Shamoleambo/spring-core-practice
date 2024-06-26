@@ -1,5 +1,6 @@
 package com.tidz.core.entities;
 
+
 import org.springframework.stereotype.Component;
 
 @Component
