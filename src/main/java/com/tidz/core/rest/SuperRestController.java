@@ -16,7 +16,7 @@ public class SuperRestController {
 	private Stupid stupidToCheck;
 
 	@Autowired
-	public SuperRestController(@Qualifier("funkoCollector") Stupid stupid,
+	public SuperRestController(@Qualifier("maskUser") Stupid stupid,
 			@Qualifier("funkoCollector") Stupid stupidToCheck) {
 		this.stupid = stupid;
 		this.stupidToCheck = stupidToCheck;
